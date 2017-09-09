@@ -1,6 +1,4 @@
-
 " MAIN CUSTOMIZATION FILE
-"
 
 " Enable loading filetype and indentation plugins
 filetype plugin on
@@ -148,12 +146,12 @@ vnoremap > >gv
 
 " map cc cx comlents //
 function! PHP_comments()
-	:s/^/\/\//g
+    :s/^/\/\//g
 endfunction
 map cc :call PHP_comments()<CR>
 
 function! PHP_remove_comments()
-	:s/^\/\///g
+    :s/^\/\///g
 endfunction
 map cx :call PHP_remove_comments()<CR>
 
@@ -169,23 +167,14 @@ highlight treeUp cterm=none ctermfg=DarkYellow
 highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
-
-"
 " NERDTree configuration
-"
-
-" Increase window size to 35 columns
 let NERDTreeWinSize=35
-
-" map <F7> to toggle NERDTree window
 nmap <silent> <F7> :NERDTreeToggle<CR>
 
 map fe :set fileencoding<CR>
 
 if has("autocmd")
-"	autocmd FileType python set dictionary+=/home/shirui/.vim/pydiction-0.5/pydiction
-"	autocmd FileType python set complete+=k
-	autocmd FileType python set complete+=k/home/shirui/.vim/pydiction-0.5/pydiction isk+=.,(
+    autocmd FileType python set complete+=k/home/shirui/.vim/pydiction-0.5/pydiction isk+=.,(
 endif
 
 " map <F12> to toggle NERDTree window
@@ -213,7 +202,6 @@ map <F5> :call PHP_CheckSyntax()<CR><CR>
 " taglist
 map <silent> <F8> :TlistToogle<CR>
 
-
 " use space instead of tab
 set expandtab
 
@@ -226,13 +214,12 @@ set expandtab
 :map 77 :tabnext 7<CR>
 :map 88 :tabnext 8<CR>
 
-map cp :w<CR>:!insmeishi % <CR><CR>
-
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'vim-airline/vim-airline'
 Plug 'pangloss/vim-javascript'
 Plug 'mhinz/vim-signify'
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
 " vim-airline/vim-airline configs
