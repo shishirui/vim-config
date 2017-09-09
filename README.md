@@ -1,6 +1,6 @@
-我的 vim 配置文档
-
 <img src="https://raw.githubusercontent.com/shishirui/vim-config/master/screenshot.png" height="500">
+
+我的 vim 配置文档
 
 ### 特性
 1. 支持 php 语法高亮、折叠。折叠和收起的切换快捷键是 `zx`
