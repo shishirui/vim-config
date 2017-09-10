@@ -31,4 +31,8 @@
 
 ### 插件
 
-有一些比较老的插件是直接安装的。最近的一些新插件，都使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装，可以在 `.vimrc` 文件的最下面找到相关配置项。如果您想添加其他插件，也推荐使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装。添加新插件时，时只需要在 `.vimrc` 文件中添加插件名称，然后执行 `:PlugInstall` 即可
+有一些比较老的插件是直接安装的。最近的一些新插件，都使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装，可以在 `.vimrc` 文件的最下面找到相关配置项。如果您想添加其他插件，也推荐使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装。
+
+#### 添加新插件
+
+打开 `.vimrc` 文件，在靠下的位置中，在 `call plug#begin` 和 `call plug#end()` 之间添加插件位于 Github 的地址，然后执行 `:PlugInstall` 即可
