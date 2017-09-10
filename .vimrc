@@ -53,7 +53,6 @@ set nrformats=octal,hex,alpha
 
 " Use F10 to toggle 'paste' mode
 set pastetoggle=<F10>
-"set buftype=''
 " Show line, column number, and relative position within a file in the status line
 set ruler
 
@@ -116,12 +115,6 @@ let g:netrw_browse_split = 1
 " MAPPINGS
 "
 
-" save changes
-map ,s :w<CR>
-" exit vim without saving any changes
-map ,q :q!<CR>
-" exit vim saving changes
-map ,w :x<CR>
 " switch to upper/lower window quickly
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -132,8 +125,6 @@ imap <C-F> 
 nmap ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 " use <F6> to toggle line numbers
 nmap <silent> <F6> :set number!<CR>
-" page down with <Space>
-"nmap <Space> <PageDown>
 " open filename under cursor in a new window (use current file's working
 " directory)
 nmap gf :new %:p:h/<cfile><CR>
@@ -155,8 +146,6 @@ function! PHP_remove_comments()
 endfunction
 map cx :call PHP_remove_comments()<CR>
 
-map ca :Calendar<cr>
-
 " Generic highlight changes
 highlight Comment cterm=none ctermfg=Gray
 highlight IncSearch cterm=none ctermfg=Black ctermbg=DarkYellow
@@ -167,40 +156,24 @@ highlight treeUp cterm=none ctermfg=DarkYellow
 highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
-" NERDTree configuration
-let NERDTreeWinSize=35
-nmap <silent> <F7> :NERDTreeToggle<CR>
-
 map fe :set fileencoding<CR>
 
-if has("autocmd")
-    autocmd FileType python set complete+=k/home/shirui/.vim/pydiction-0.5/pydiction isk+=.,(
-endif
-
-" map <F12> to toggle NERDTree window
-nmap <silent> <F12> :set list!<CR>
 set list
 set lcs=tab:>-,trail:-
 
-"" del space
-" map ds delete space
+" del space
 nmap <silent> <F11> :%s/\s\+$//g<CR>
-"map  ds v:%s/\s\+$//g<CR>
-"vmap ds  :%s/\s\+$//g<CR>
 
 " PHP syntax check
 function! PHP_CheckSyntax()
-	setlocal makeprg=/usr/local/bin/php\ -l\ -n\ -d\ html_errors=off
-	setlocal shellpipe=>
-	" Use error format for parsing PHP error output
-	setlocal errorformat=%m\ in\ %f\ on\ line\ %l
-	make %
+    setlocal makeprg=/usr/local/bin/php\ -l\ -n\ -d\ html_errors=off
+    setlocal shellpipe=>
+    " Use error format for parsing PHP error output
+    setlocal errorformat=%m\ in\ %f\ on\ line\ %l
+    make %
 endfunction
 " Perform :PHP_CheckSyntax()
 map <F5> :call PHP_CheckSyntax()<CR><CR>
-
-" taglist
-map <silent> <F8> :TlistToogle<CR>
 
 " use space instead of tab
 set expandtab
@@ -221,6 +194,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'mhinz/vim-signify'
 Plug 'terryma/vim-expand-region'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'itchyny/calendar.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 " vim-airline/vim-airline configs
@@ -246,3 +222,13 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 map fzf :FZF<CR>
 map FZF :FZF<CR>
+
+" itchyny/calendar.vim configs
+map ca :Calendar<cr>
+
+" scrooloose/nerdtree
+let NERDTreeWinSize=35
+nmap <silent> <F7> :NERDTreeToggle<CR>
+
+" vim-scripts/taglist.vim configs
+map <silent> <F8> :TlistToogle<CR>
