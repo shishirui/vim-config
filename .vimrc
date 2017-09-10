@@ -220,6 +220,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'pangloss/vim-javascript'
 Plug 'mhinz/vim-signify'
 Plug 'terryma/vim-expand-region'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 " vim-airline/vim-airline configs
@@ -236,3 +237,12 @@ let g:signify_vcs_list = [ 'git', 'svn' ]
 highlight SignifySignAdd    cterm=bold ctermbg=0  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=0  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=0  ctermfg=227
+
+" junegunn/fzf configs
+let g:fzf_action = {
+  \ 'enter': 'tab split',
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+map fzf :FZF<CR>
+map FZF :FZF<CR>
