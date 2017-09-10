@@ -27,7 +27,7 @@
 
 ### 配置
 
-打开 `.vimrc` 文件可以进行进一步配置
+打开 `.vimrc` 文件可以进行进一步配置。
 
 ### 插件
 
@@ -35,4 +35,4 @@
 
 #### 添加新插件
 
-打开 `.vimrc` 文件，在靠下的位置中，在 `call plug#begin` 和 `call plug#end()` 之间添加插件位于 Github 的地址，然后执行 `:PlugInstall` 即可
+打开 `.vimrc` 文件，在靠下的位置中，在 `call plug#begin` 和 `call plug#end()` 之间添加插件位于 Github 的地址，然后执行 `:PlugInstall` 即可。
