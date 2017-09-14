@@ -25,6 +25,15 @@
 1. 在选定一段代码后，输入 `>>` 向右缩进，输入 `<<` 向左缩进
 1. 将当前文件的编码设置为 utf-8，输入 `fe` 命令
 
+### 安装
+
+    cd ~
+    git clone https://github.com/shishirui/vim-config.git 
+    cp -r vim-config/.vim vim-config/.vimrc .
+
+运行 vim，并输入 `PlugInstall` 安装插件。全部安插成功后，重启 vim 即可。
+    
+
 ### 配置
 
 打开 `.vimrc` 文件可以进行进一步配置。
