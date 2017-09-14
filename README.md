@@ -25,10 +25,23 @@
 1. 在选定一段代码后，输入 `>>` 向右缩进，输入 `<<` 向左缩进
 1. 将当前文件的编码设置为 utf-8，输入 `fe` 命令
 
+### 安装
+
+    cd ~
+    git clone https://github.com/shishirui/vim-config.git 
+    cp -r vim-config/.vim vim-config/.vimrc .
+
+运行 vim，并输入 `PlugInstall` 安装插件。全部安插成功后，重启 vim 即可。
+    
+
 ### 配置
 
-打开 `.vimrc` 文件可以进行进一步配置
+打开 `.vimrc` 文件可以进行进一步配置。
 
 ### 插件
 
-有一些比较老的插件是直接安装的。最近的一些新插件，都使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装，可以在`.vimrc`文件的最下面找到相关配置项。如果您想添加其他插件，也推荐使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装。
+有一些比较老的插件是直接安装的。最近的一些新插件，都使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装，可以在 `.vimrc` 文件的最下面找到相关配置项。如果您想添加其他插件，也推荐使用 [vim-plug](https://github.com/junegunn/vim-plug) 安装。
+
+#### 添加新插件
+
+打开 `.vimrc` 文件，在靠下的位置中，在 `call plug#begin` 和 `call plug#end()` 之间添加插件位于 Github 的地址，然后执行 `:PlugInstall` 即可。
