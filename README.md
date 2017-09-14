@@ -31,7 +31,7 @@
     git clone https://github.com/shishirui/vim-config.git 
     cp -r vim-config/.vim vim-config/.vimrc .
 
-运行 vim，并输入 `PlugInstall` 安装插件。等待搜友插件安装成功完成后，重启 vim 即可。
+运行 vim，并输入 `:PlugInstall` 安装插件。等待搜友插件安装成功完成后，重启 vim 即可。
     
 
 ### 配置
