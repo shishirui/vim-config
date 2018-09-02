@@ -206,7 +206,7 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 
 " pangloss/vim-javascript configs
 let g:javascript_plugin_jsdoc = 1
-set foldmethod=syntax
+"set foldmethod=syntax
 
 " mhinz/vim-signify configs
 let g:signify_vcs_list = [ 'git', 'svn' ]
@@ -232,3 +232,21 @@ nmap <silent> <F7> :NERDTreeToggle<CR>
 
 " vim-scripts/taglist.vim configs
 map <silent> <F8> :TlistToogle<CR>
+
+" FastFold configs
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+let g:markdown_folding = 1
+let g:tex_fold_enabled = 1
+let g:vimsyn_folding = 'af'
+let g:xml_syntax_folding = 1
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
+let g:ruby_fold = 1
+let g:perl_fold = 1
+let g:perl_fold_blocks = 1
+let g:r_syntax_folding = 1
+let g:rust_fold = 1
+let g:php_folding = 1

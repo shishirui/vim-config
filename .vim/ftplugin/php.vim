@@ -19,7 +19,7 @@ set textwidth=80
 " Syntax options
 "
 " Enable folding of class/function blocks
-let php_folding = 1
+" let php_folding = 1
 
 " Do not use short tags to find PHP blocks
 let php_noShortTags = 1
