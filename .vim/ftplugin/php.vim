@@ -83,10 +83,12 @@ omap <silent> iP :silent normal viP<CR>
 inoremap <buffer> <C-P> <Esc>:call PhpDocSingle()<CR>i
 nnoremap <buffer> <C-P> :call PhpDocSingle()<CR>
 vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
+
 " Generate @uses tag based on inheritance info
 let g:pdv_cfg_Uses = 1
+
 " Set default Copyright
-let g:pdv_cfg_Copyright = "Copyright (C) 2007 freeman"
+let g:pdv_cfg_Copyright = "Copyright (C) 2007 PGYER"
 
 " Exuberant Ctags
 "
@@ -99,5 +101,8 @@ nmap <silent> <F4>
 
 " Set tag filename(s)
 set tags=./tags,tags
+
+let b:ale_linters = ['phpcs']
+let g:ale_php_phpcs_standard = "PSR2"
 
 " vim: set fdm=marker:

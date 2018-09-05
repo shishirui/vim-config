@@ -25,10 +25,6 @@ set completeopt=menu,longest,preview
 
 " Use UTF-8 as the default buffer encoding
 set enc=utf-8
-" set encoding=cp936
-" set fileencodings=ucs-bom,utf-8,cp936
-" set fileencoding=chinese
-" set fileencodings=ucs-bom,utf-8,chinese
 set ambiwidth=double
 set fencs=utf-8,gbk,gb2312
 
@@ -53,6 +49,7 @@ set nrformats=octal,hex,alpha
 
 " Use F10 to toggle 'paste' mode
 set pastetoggle=<F10>
+
 " Show line, column number, and relative position within a file in the status line
 set ruler
 
@@ -101,10 +98,6 @@ set wildmode=list:longest,full
 " Go back to the position the cursor was on the last time this file was edited
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")|execute("normal `\"")|endif
 
-" Fix my <Backspace> key (in Mac OS X Terminal)
-" set t_kb=
-" fixdel
-
 " Avoid loading MatchParen plugin
 let loaded_matchparen = 1
 
@@ -136,15 +129,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " map cc cx comlents //
-function! PHP_comments()
-    :s/^/\/\//g
-endfunction
-map cc :call PHP_comments()<CR>
-
-function! PHP_remove_comments()
-    :s/^\/\///g
-endfunction
-map cx :call PHP_remove_comments()<CR>
+map cc <Leader>cl
+map cx <Leader>cu
 
 " Generic highlight changes
 highlight Comment cterm=none ctermfg=Gray
@@ -166,12 +152,12 @@ nmap <silent> <F11> :%s/\s\+$//g<CR>
 
 " PHP syntax check
 function! PHP_CheckSyntax()
-    setlocal makeprg=/usr/local/bin/php\ -l\ -n\ -d\ html_errors=off
+    setlocal makeprg=php\ -l\ -n\ -d\ html_errors=off
     setlocal shellpipe=>
-    " Use error format for parsing PHP error output
     setlocal errorformat=%m\ in\ %f\ on\ line\ %l
     make %
 endfunction
+
 " Perform :PHP_CheckSyntax()
 map <F5> :call PHP_CheckSyntax()<CR><CR>
 
@@ -197,6 +183,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'itchyny/calendar.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/taglist.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Konfekt/FastFold'
+Plug 'w0rp/ale'
 call plug#end()
 
 " vim-airline/vim-airline configs
@@ -233,7 +222,7 @@ nmap <silent> <F7> :NERDTreeToggle<CR>
 " vim-scripts/taglist.vim configs
 map <silent> <F8> :TlistToogle<CR>
 
-" FastFold configs
+" Konfekt/FastFold configs
 nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
@@ -250,3 +239,19 @@ let g:perl_fold_blocks = 1
 let g:r_syntax_folding = 1
 let g:rust_fold = 1
 let g:php_folding = 1
+
+" scrooloose/nerdcommenter configs
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 0
+let g:NERDDefaultAlign = 'left'
+let g:NERDAltDelims_java = 0
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCommentEmptyLines = 0
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
+
+" w0rp/ale configs
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
