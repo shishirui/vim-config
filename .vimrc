@@ -104,7 +104,9 @@ let loaded_matchparen = 1
 " netRW: Open files in a split window
 let g:netrw_browse_split = 1
 
+set background=dark
 colorscheme hybrid
+
 
 "
 " MAPPINGS
