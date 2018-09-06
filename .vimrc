@@ -104,6 +104,8 @@ let loaded_matchparen = 1
 " netRW: Open files in a split window
 let g:netrw_browse_split = 1
 
+colorscheme hybrid
+
 "
 " MAPPINGS
 "
@@ -133,14 +135,14 @@ map cc <Leader>cl
 map cx <Leader>cu
 
 " Generic highlight changes
-highlight Comment cterm=none ctermfg=Gray
-highlight IncSearch cterm=none ctermfg=Black ctermbg=DarkYellow
-highlight Search cterm=none ctermfg=White ctermbg=4
-highlight String cterm=none ctermfg=DarkGreen
-highlight treeDir cterm=none ctermfg=Cyan
-highlight treeUp cterm=none ctermfg=DarkYellow
-highlight treeCWD cterm=none ctermfg=DarkYellow
-highlight netrwDir cterm=none ctermfg=Cyan
+" highlight Comment cterm=none ctermfg=Gray
+" highlight IncSearch cterm=none ctermfg=Black ctermbg=DarkYellow
+" highlight Search cterm=none ctermfg=White ctermbg=4
+" highlight String cterm=none ctermfg=DarkGreen
+" highlight treeDir cterm=none ctermfg=Cyan
+" highlight treeUp cterm=none ctermfg=DarkYellow
+" highlight treeCWD cterm=none ctermfg=DarkYellow
+" highlight netrwDir cterm=none ctermfg=Cyan
 
 map fe :set fileencoding<CR>
 
