@@ -104,9 +104,12 @@ let loaded_matchparen = 1
 " netRW: Open files in a split window
 let g:netrw_browse_split = 1
 
+" hybird color scheme configs
 set background=dark
+let g:hybrid_custom_term_colors = 1
 colorscheme hybrid
 
+set cursorline
 
 "
 " MAPPINGS
@@ -259,3 +262,4 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
+
