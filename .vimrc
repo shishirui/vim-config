@@ -105,13 +105,11 @@ let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
 " hybird color scheme configs
-set background=dark
-let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
+ set background=dark
+colorscheme Tomorrow-Night
 
 set colorcolumn=121
 set cursorline
-
 "
 " MAPPINGS
 "
