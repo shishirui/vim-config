@@ -104,6 +104,8 @@ let loaded_matchparen = 1
 " netRW: Open files in a split window
 let g:netrw_browse_split = 1
 
+set nobackup
+
 " hybird color scheme configs
  set background=dark
 colorscheme Tomorrow-Night
