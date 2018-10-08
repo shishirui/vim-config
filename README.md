@@ -33,9 +33,8 @@
 
 ### 安装
 
-    cd ~
-    git clone https://github.com/shishirui/vim-config.git 
-    cp -r vim-config/.vim vim-config/.vimrc .
+    git clone https://github.com/shishirui/vim-config.git
+    cp -r vim-config/.vim vim-config/.vimrc ~
 
 运行 vim，并输入 `:PlugInstall` 安装插件。等待所有插件安装完成后，重启 vim 即可。
     
