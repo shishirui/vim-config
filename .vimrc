@@ -193,7 +193,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Konfekt/FastFold'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 call plug#end()
 
 " vim-airline/vim-airline configs
