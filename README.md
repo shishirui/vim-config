@@ -1,6 +1,8 @@
-<img src="https://raw.githubusercontent.com/shishirui/vim-config/master/screenshot.png">
+# vim-config
 
-我的 vim 配置文档
+一套为 php 开发打造的 vim 配置文档。
+
+<img src="https://raw.githubusercontent.com/shishirui/vim-config/master/screenshot.png">
 
 ### 特性
 
