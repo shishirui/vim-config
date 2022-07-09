@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/shishirui/vim-config/master/screenshot.png" height="500">
+<img src="https://raw.githubusercontent.com/shishirui/vim-config/master/screenshot.png">
 
 我的 vim 配置文档
 
